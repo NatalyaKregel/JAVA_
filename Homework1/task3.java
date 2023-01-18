@@ -1,9 +1,10 @@
 //3. Найти все кратные n числа в диапазоне от i до Short.MAX_VALUE сохранить в массив m1
-
 package Homework1;
+
 
 public class task3 {
     public static void main(String[] args){
+        
         int q1 = 0;
 		int[] array = new int[12];
         System.out.print(" массив случайных чисел m = ["); 
@@ -30,4 +31,6 @@ public class task3 {
         System.out.print("]"); 
         System.out.println();
     }
-}
+
+
+}    
