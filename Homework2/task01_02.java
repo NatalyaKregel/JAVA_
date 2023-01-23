@@ -1,6 +1,6 @@
 package Homework2;
-import java.util.Scanner;
-import java.util.function.IntBinaryOperator;
+//import java.util.Scanner;
+//import java.util.function.IntBinaryOperator;
 
 public class task01_02 {
     // Задание 1. Напишите программу, чтобы найти вхождение в строке (содержащей все символы другой строки).
