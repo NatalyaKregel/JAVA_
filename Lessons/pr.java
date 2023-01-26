@@ -1,4 +1,4 @@
-package Homework4;
+package Lessons;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -14,7 +14,7 @@ import java.util.LinkedList;
 // 3.Загруженный и разбитый по строкам текст загрузить в подготовленные списки. Фамилии, имена, отчества, возрас и пол в отдельных списках.
 // 4.Отсортировать по возрасту используя дополнительный список индексов.
 
-public class task01 {        
+public class pr {        
     public static void main(String[] args) {
         
         ArrayList<String> family = new ArrayList<>();
@@ -31,25 +31,27 @@ public class task01 {
 //            fileWriter.flush();
 //            fileWriter.close();
 
-            FileReader fileReader = new FileReader("bd.sql");
+        FileReader fileReader = new FileReader("bd.sql");
 
-            while (fileReader.ready()) {
-                text += (char) fileReader.read();
-            }
+        while (fileReader.ready()) {
+            text += (char) fileReader.read();
+        }
+        fileReader.close();
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
         String[] str = text.split("\n");
-        boolean booleanGender;
+        //boolean booleanGender;
         for (int i = 0; i < str.length; i++) {
             String[] sb = str[i].split(" ");
             family.add(sb[0]);
             name.add(sb[1].charAt(0) + ".");
             soname.add(sb[2].charAt(0) + ".");
             age.add(Integer.valueOf(sb[3]));
-            //booleanGender = (sb[4] == "M" ? true : false);
-            gender.add(sb[4].equals("Zh") ? true : false);
+            //booleanGender = (sb[4] == "Zh" ? true : false);
+            gender.add(sb[4].equals("M") ? true : false);
             index.add(i);
         }
         index.sort(new Comparator<Integer>() {
@@ -70,7 +72,7 @@ public class task01 {
         }
 
         System.out.println(family);
-
+        
     }
 }
 
