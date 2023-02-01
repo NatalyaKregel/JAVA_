@@ -3,7 +3,7 @@ package Seminars;
 import java.util.HashMap;
 import java.util.Set;
 
-import javax.swing.text.html.HTMLDocument.Iterator;
+//import javax.swing.text.html.HTMLDocument.Iterator;
 
 public class seminar5 {
         public static void main(String[] args) {
